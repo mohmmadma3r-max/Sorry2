@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلى حبيبتي</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+        body {
+            background-color: #fffafb;
+            font-family: 'Cairo', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #5d3a3a;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            max-width: 500px;
+            width: 85%;
+            position: relative;
+            z-index: 10;
+            line-height: 1.8;
+            max-height: 85vh; /* تحديد طول الصندوق عشان ما يختفي النص */
+            overflow-y: auto; /* إضافة سكرول داخلي إذا النص طويل */
+            margin: 20px;
+        }
+
+        /* تنسيق السكرول بار عشان يكون شكله ناعم */
+        .container::-webkit-scrollbar { width: 5px; }
+        .container::-webkit-scrollbar-thumb { background: #ffb6c1; border-radius: 10px; }
+
+        h1 { color: #d63384; font-size: 2.2rem; margin-top: 0; }
+        
+        p { 
+            font-size: 1.1rem; 
+            white-space: pre-line; 
+            margin: 15px 0;
+            text-align: center; /* رجعته توسيط عشان التناسق */
+        }
+
+        .btn {
+            background-color: #ff4d94;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(255, 77, 148, 0.3);
+        }
+
+        .btn:hover { transform: scale(1.05); background-color: #d63384; }
+
+        .hidden { display: none !important; }
+        .fade-in { animation: fadeIn 1.2s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .hearts { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; overflow: hidden; }
+        .heart { position: absolute; color: rgba(255, 182, 193, 0.6); animation: fly 5s infinite linear; }
+        @keyframes fly {
+            0% { transform: translateY(110vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hearts" id="hearts-container"></div>
+
+<div id="step1" class="container fade-in">
+    <h1>بحبك</h1>
+    <p>اضغطي تحت يا روحي..</p>
+    <button class="btn" onclick="nextStep(1, 2)">اضغطي هنا</button>
+</div>
+
+<div id="step2" class="container hidden">
+    <p>
+        يا بعد قلبي وروحي،
+        قاعد بكتبلك هالحكي وأنا حاسس بضيق كثير بصدري لأنك زعلانة مني. والله العظيم ما كان قصدي أجرحك أو أضايقك، بس لحظة غضب وطيش خلتني أرفع صوتي، وأنا هسا ندمان كثير على هالأشي.
+
+        مكانتك بقلبي أكبر بكثير من أي زعل، وانتي بتعرفي قديش غلاتك عندي. والله ما يهون عليّ يمر اليوم وإحنا كذا، ولا يرضيني أشوفك متكدرة بسببي. بوعدك وعد رجال إني أمسك أعصابي وما أكررها أبداً، وأكون لك السند والحضن الدافي اللي ما يرفع صوته عليكي.
+
+        سامحيني يا كل دنيتي، ولا تخلي هالموقف الصغير يكدر صفونا. أحبك كثير وأوعدك ما عاد تشوفي مني إلا كل خير وحنية.
+    </p>
+    <button id="next-btn-2" class="btn hidden" onclick="nextStep(2, 3)">تكملي؟</button>
+</div>
+
+<div id="step3" class="container hidden">
+    <p>
+        يا رب، يا حنان يا منان، يا من لا يعجزه شيء في الأرض ولا في السماء.. أنا واقف بين يديك وبدعيك من كل قلبي. يا رب أنت عالم بحالي وعالم قديش أنا ندمان على الأشي اللي صار اليوم، وعالم إني ما كان قصدي أكسر خاطرها أو أضايقها، بس يارب صار الي صار وزعلتها 
+
+        يا رب أصلح حالنا ويخلينا لبعض ولا يفرقنا أبداً، ويبعد عنا الزعل والكدر ويصفي القلوب. يا رب وفقها بدراستها وافتح بوجهها أبواب النجاح والتفوق، واجعل كل صعب عليها سهل، وفرح قلبها بأعلى الدرجات.
+
+        يا رب ارضيها وأرضى عنها، وابعد عنها كل شر، وابعد عنها كل الشباب وما يملأ عينها وقلبها غيري أنا وبس، واجعلني أنا الوحيد اللي بقلبها ودنيتها. يا رب زيد حبنا كل يوم أكثر وأكثر، واجعل المودة والرحمة هي أساسنا.
+
+        يا رب لا تخليني أنام وهي زعلانة مني، ولا تخليها تنام وهي شايلة بقلبها عليّ. يا رب سخرنا لبعض، واجعلنا من اللي إذا غضبوا استغفروا، وإذا أخطأوا اعتذروا. اللهم بارك لنا في حبنا واكتب لنا الخير في كل خطوة، وأبعد عنا كل سوء وكدر. يا رب استجب دعائي فإني أحبها فيك ولا أطيق زعلها. آمين يا رب العالمين.
+    </p>
+    <button class="btn" onclick="nextStep(3, 4)">بحبك (اضغطي)</button>
+</div>
+
+<div id="step4" class="container hidden">
+    <h1 style="font-size: 3rem;">🥺💕</h1>
+    <p style="font-size: 1.3rem; font-weight: bold; color: #d63384;">
+        بعششششششششششققققكككك وبموووووووووووووووووت فيييييكككييييييييييي وبهواااكي ياروحي ونظري وعيوني وبنوتتي وحبيبتي ومدللتي وقمري ونجومي وحلوتي وعسولتي وقمري ونجومي وكل اشي بدنيتي وأنا أسف يا روحي
+    </p>
+</div>
+
+<script>
+    function nextStep(current, next) {
+        document.getElementById('step' + current).classList.add('hidden');
+        const nextDiv = document.getElementById('step' + next);
+        nextDiv.classList.remove('hidden');
+        nextDiv.classList.add('fade-in');
+        
+        // تصفير السكرول للأعلى عند الانتقال
+        nextDiv.scrollTop = 0;
+
+        if (next === 2) {
+            setTimeout(() => {
+                document.getElementById('next-btn-2').classList.remove('hidden');
+            }, 15000); 
+        }
+    }
+
+    const heartsContainer = document.getElementById('hearts-container');
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.innerHTML = '❤️';
+        heart.classList.add('heart');
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+        heart.style.fontSize = Math.random() * 15 + 10 + 'px';
+        heartsContainer.appendChild(heart);
+        setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 400);
+</script>
+
+</body>
+</html>
